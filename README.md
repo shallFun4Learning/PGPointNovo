@@ -23,4 +23,4 @@ PGPointNovo, PointNovo with more advanced optimization strategy and supporting d
      
      Please don't forget the parameters that should have been changed when using pointnovo, such as file path, regenerating related files, etc. They 
      
-  3. Ok, if you don't care about the deep learning technology, after configuring the relevant parameters, you just need to enter` make rec `on the terminal to start running. Richer parameters for data parallelization are set in the makefile file.
+  3. Ok, after configuring the relevant parameters, you just need to enter` make rec `on the terminal to start running. Richer parameters for data parallelization are set in the makefile file.
