@@ -17,10 +17,10 @@ PGPointNovo, PointNovo with more advanced optimization strategy and supporting d
   
      
      `
-     factor = 0.8 #For the learning rate plan, the steps are reduced in the case of multiple GPUs,
+     factor = 0.8 #For the learning rate schedule, the steps are reduced in the case of multiple GPUs,
      and 0.8 is a good parameter obtained in the case of 8 gpus. You could try more.
      `
      
-     Please don't forget the parameters that should have been changed when using pointnovo, such as file path, regenerating related files, etc. They 
+     Please don't forget the parameters that should have been changed when using pointnovo, such as file path, regenerating related files, etc.
      
   3. Ok, after configuring the relevant parameters, you just need to enter` make rec `on the terminal to start running. Richer parameters for data parallelization are set in the makefile file.
