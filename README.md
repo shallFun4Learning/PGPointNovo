@@ -50,7 +50,68 @@ We ran PGPointNovo on a single node of the super-computer in Naional Center for 
    ~~~
 
 ## DataSets
-
+<table border="0" cellpadding="0" cellspacing="0" width="732" style="border-collapse: 
+ collapse;table-layout:fixed;width:549pt">
+ <colgroup><col width="92" style="mso-width-source:userset;width:69pt">
+ <col width="71" style="mso-width-source:userset;width:53.25pt">
+ <col width="94" style="mso-width-source:userset;width:70.5pt">
+ <col width="99" style="mso-width-source:userset;width:74.25pt">
+ <col width="94" span="4" style="mso-width-source:userset;width:70.5pt">
+ </colgroup><tbody><tr height="18" style="mso-height-source:userset;height:14.1pt" id="r0">
+<td height="16" class="x69" width="92" style="height:12.6pt;width:69pt;">Dataset</td>
+<td class="x70" width="71" style="width:53.25pt;">ABRF</td>
+<td class="x70" width="94" style="width:70.5pt;">PXD008844</td>
+<td class="x70" width="99" style="width:74.25pt;">PXD010559</td>
+<td colspan="4" class="x71" width="376" style="border-right:1px solid windowtext;border-bottom:1px solid windowtext;">The merged dataset</td>
+ </tr>
+ <tr height="18" style="mso-height-source:userset;height:14.1pt" id="r1">
+<td height="16" class="x69" style="height:12.6pt;">Data Name</td>
+<td class="x70">ABRF</td>
+<td class="x70">PXD008844</td>
+<td class="x70">PXD010559</td>
+<td class="x70">PXD008808</td>
+<td class="x70">PXD011246</td>
+<td class="x70">PXD012645</td>
+<td class="x70">PXD012979</td>
+ </tr>
+ <tr height="244" style="mso-height-source:userset;height:183.45pt" id="r2">
+<td height="242" class="x69" style="height:181.95pt;">Species</td>
+<td class="x71">Homo sapiens (Human)</td>
+<td class="x71">Mus musculus (Mouse)</td>
+<td class="x71">Plasmodium berghei ANKA; Anopheles stephensi (Asian malaria mosquito); Bos taurus (Bovine); Homo sapiens (Human)</td>
+<td class="x71">Tursiops truncatus (Atlantic bottle-nosed dolphin) (Delphinus truncatus)</td>
+<td class="x71">Homo sapiens (Human)</td>
+<td class="x71">&nbsp;Homo sapiens (Human)</td>
+<td class="x71">&nbsp;Mus musculus (Mouse)</td>
+ </tr>
+ <tr height="244" style="mso-height-source:userset;height:183.45pt" id="r3">
+<td height="242" class="x72" style="height:181.95pt;">Modifications<br>(Used by PointNovo)</td>
+<td class="x71">fixed:C(Carbamidomethylation);<br>variable:M(Oxidation),<br>N(Deamidation),Q(Deamidation)</td>
+<td class="x71">fixed:C(Carbamidomethylation);<br>variable:M(Oxidation)</td>
+<td class="x71"><font class="font3">fixed:C(Carbamidomethylation);<br>variable:M(Oxidation),N(Deamidation),</font><font class="font22"><br></font><font class="font3">Q(Deamidation),S(Phosphorylation),<br>T(Phosphorylation),Y(Phosphorylation)</font></td>
+<td colspan="4" class="x71" style="border-right:1px solid windowtext;border-bottom:1px solid windowtext;">fixed:C(Carbamidomethylation);<br>variable:M(Oxidation)</td>
+ </tr>
+ <tr height="56" style="mso-height-source:userset;height:42.45pt" id="r4">
+<td height="54" class="x72" style="height:40.95pt;">Available Spectrums Count</td>
+<td class="x70" x:fmla="=87273+10734+11031">109038</td>
+<td class="x70" x:fmla="=100861+12859+11351">125071</td>
+<td class="x70" x:fmla="=369243+46021+46497">461761</td>
+<td colspan="4" class="x70" x:fmla="=28815+567557" style="border-right:1px solid windowtext;border-bottom:1px solid windowtext;">596372</td>
+ </tr>
+<!--[if supportMisalignedColumns]-->
+ <tr height="0" style="display:none">
+  <td width="92" style="width:69pt"></td>
+  <td width="71" style="width:53.25pt"></td>
+  <td width="94" style="width:70.5pt"></td>
+  <td width="99" style="width:74.25pt"></td>
+  <td width="94" style="width:70.5pt"></td>
+  <td width="94" style="width:70.5pt"></td>
+  <td width="94" style="width:70.5pt"></td>
+  <td width="94" style="width:70.5pt"></td>
+ </tr>
+ <!--[endif]-->
+</tbody></table>
+For links to download the available datasets go to Quick Start.
    
 ## Usage
   Ranger is a non-invasive optimiser. We have made a high level wrapper for PointNovo, so the usage is essentially the same as PointNovo, which eliminates the need for additional learning costs for the user. PointNovo's README could be found [here](https://github.com/shallFun4Learning/PGPointNovo/blob/main/README4PointNovo.md).
@@ -62,7 +123,7 @@ We ran PGPointNovo on a single node of the super-computer in Naional Center for 
   ~~~
   make build
   ~~~
-  And, Download the datasets and files required for the knapsack algorithm. If it is not downloaded, the program will generate it automatically, but this will take some time.For reasons of copyright and fair comparison, we provide links to download the datasets in PointNovo's paper.The datasets covered in the paper and the knapsack files with different modifications can be found [here](https://www.zenodo.org/record/3998873). The test set for PGPointNovo's ablation experiments can be found [here]().
+  And, download the datasets and files required for the knapsack algorithm. If it is not downloaded, the program will generate it automatically, but this will take some time. For reasons of copyright and fair comparison, we provide links to download the datasets in PointNovo's paper. The datasets covered in the paper and the knapsack files with different modifications can be found [here](https://www.zenodo.org/record/3998873). The test set for PGPointNovo's ablation experiments can be found here(uploading).
   To train model：
   ~~~
   make train
@@ -79,7 +140,7 @@ We ran PGPointNovo on a single node of the super-computer in Naional Center for 
   
   ### Advanced Use Tutorials
   #### About PointNovo
-  Most of the configuration is stored in *config.py* and can be freely altered by the user as appropriate. In general, it is necessary to modify *vocab_reverse* according to the different modifications.In addition, you may also need to specify the knapsack file (refer to **Quick start**).
+  Most of the configuration is stored in *config.py* and can be freely altered by the user as appropriate. In general, it is necessary to modify *vocab_reverse* according to the different modifications. In addition, you may also need to specify the knapsack file (refer to **Quick start**).
 
   In PointNovo, the dataset file path needs to be specified manually,such as: 
   > input_spectrum_file_train = "PXD008844/spectrums.mgf"
