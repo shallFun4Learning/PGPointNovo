@@ -37,7 +37,7 @@ We ran PGPointNovo on a single node of the super-computer in Naional Center for 
    ~~~
    conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.2 -c pytorch
    ~~~
-   or see the [PyTorch website](https://pytorch.org/get-started/previous-versions/).
+    or see the [PyTorch website](https://pytorch.org/get-started/previous-versions/).
    
    d. About other dependencies
    
@@ -111,7 +111,7 @@ We ran PGPointNovo on a single node of the super-computer in Naional Center for 
  </tr>
  <!--[endif]-->
 </tbody></table>
-For links to download the available datasets go to Quick Start.
+For dataset downloads please check the **Quick Start**.
    
 ## Usage
   Ranger is a non-invasive optimiser. We have made a high level wrapper for PointNovo, so the usage is essentially the same as PointNovo, which eliminates the need for additional learning costs for the user. PointNovo's README could be found [here](https://github.com/shallFun4Learning/PGPointNovo/blob/main/README4PointNovo.md).
@@ -123,7 +123,7 @@ For links to download the available datasets go to Quick Start.
   ~~~
   make build
   ~~~
-  And, download the datasets and files required for the knapsack algorithm. If it is not downloaded, the program will generate it automatically, but this will take some time. For reasons of copyright and fair comparison, we provide links to download the datasets in PointNovo's paper. The datasets covered in the paper and the knapsack files with different modifications can be found [here](https://www.zenodo.org/record/3998873). The test set for PGPointNovo's ablation experiments can be found here(uploading).
+  And, download the datasets and files required for the knapsack algorithm. If it is not downloaded, the program will generate it automatically, but this will take some time. For reasons of copyright and fair comparison, we provide links to download the datasets in PointNovo's paper. The datasets covered in the paper and the knapsack files with different modifications can be found [here](https://www.zenodo.org/record/3998873). The test set for PGPointNovo's ablation experiments can be found [here](https://4wgz12-my.sharepoint.com/:f:/g/personal/admin_4wgz12_onmicrosoft_com/EkSVVDWO1t9PorW6Y1rqCi4BWXfDy61-cYVWA5Ey-LxPxA?e=r5wl2M).
   To train model：
   ~~~
   make train
@@ -181,8 +181,22 @@ For links to download the available datasets go to Quick Start.
   
    *use_sync* is used to control whether to use the SyncBatchNorm instead of the BatchNorm in PointNovo. In the case of distributed data parallel training on multi GPUs, the BatchNorm calculation process (statistical mean and variance) is independent between processes, i.e. each process can only see the local GlobalBatchSize/NumGpu size data. We usually recommend that this is left set to True.
    
+   In *makefile* file, we can specify parallelisation-related settings. 
+   ~~~
+   CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" python -m torch.distributed.launch --master_port 231181 --nproc_per_node 8 main.py --train
+   ~~~
+   
+   You should use *CUDA_VISIBLE_DEVICES* and *--nproc_per_node to correctly* specify which GPUs are required and the number of GPUs used.
+   
+   The *--master_port* can be omitted if only one parallelisation task is allowed. If multiple parallelisation tasks exist, different port numbers should be specified to avoid port conflicts.
+   
+## LICENSE
+Please note that PointNovo is for non-commercial use only.
+The added code section of PGPointNovo follows Apache-2.0 license.
+
 ## Supports
 Feel free to submit an issue or contact the author (sfun@foxmail.com) if you encounter any problems during use.
+
 Happy Year of the Rabbit :-)
 
   
