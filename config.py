@@ -47,7 +47,7 @@ print("batch_size ", batch_size)
 use_ranger = True
 use_sync = True
 num_epoch = 20
-factor = 0.8
+factor = 0.7
 init_lr = (1e-3)*num_GPUs
 steps_per_validation = 300//num_GPUs  # 100 # 2 # 4 # 200
 print("steps_per_validation ", steps_per_validation)
@@ -289,12 +289,12 @@ data_format = "mgf"
 cleavage_rule = "trypsin"
 num_missed_cleavage = 2
 
-dataset_name = 'ABRF_DDA'
-# dataset_name = 'PXD008844'
+# dataset_name = 'ABRF_DDA'
+dataset_name = 'PXD008844'
 # dataset_name = 'PXD010559'
-# knapsack_file = "fix_C_var_M_knapsack.npy"
+knapsack_file = "fix_C_var_M_knapsack.npy"
 # knapsack_file = "fix_C_var_NMQSTY_knapsack.npy"
-knapsack_file = "fix_C_var_NMQ_knapsack.npy"
+# knapsack_file = "fix_C_var_NMQ_knapsack.npy"
 input_spectrum_file_train = dataset_name+"/spectrums.mgf"
 input_feature_file_train = dataset_name+"/features.csv.identified.train.nodup"
 input_spectrum_file_valid = dataset_name+"/spectrums.mgf"

@@ -353,9 +353,9 @@ def train():
                 validation_loss = validation(
                     forward_deepnovo, backward_deepnovo, init_net, valid_data_loader)
 
-                with open('temp/vl.temp', 'a+') as f_vl:
-                    print(
-                        f'On {dist.get_rank()} Gpus,  validation_loss={validation_loss}', file=f_vl)
+                # with open('temp/vl.temp', 'a+') as f_vl:
+                #     print(
+                #         f'On {dist.get_rank()} Gpus,  validation_loss={validation_loss}', file=f_vl)
 
                 validation_loss = torch.tensor(
                     [validation_loss], dtype=torch.float32, device=model.device, requires_grad=False)
@@ -365,9 +365,9 @@ def train():
                 validation_loss = float(validation_loss/config.num_GPUs)
                 dense_scheduler.step(validation_loss)
 
-                with open('temp/vl.temp', 'a+') as f_vl:
-                    print(
-                        f'On {dist.get_rank()} Gpus,  get validation_loss={validation_loss}', file=f_vl)
+                # with open('temp/vl.temp', 'a+') as f_vl:
+                #     print(
+                #         f'On {dist.get_rank()} Gpus,  get validation_loss={validation_loss}', file=f_vl)
 
                 dist.barrier()
                 if validation_loss < best_valid_loss:

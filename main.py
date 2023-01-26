@@ -62,7 +62,6 @@ def main():
             print(f'num_workers: {config.num_workers}', file=rec)
             print(f'Total time: {e-s} sec, {(e-s)/3600} h .', file=rec)
     elif config.FLAGS.search_denovo:
-
         s = time.time()
         logger.info("denovo mode")
         data_reader = DeepNovoDenovoDataset(feature_filename=config.denovo_input_feature_file,
