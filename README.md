@@ -111,7 +111,8 @@ We ran PGPointNovo on a single node of the super-computer in Naional Center for 
  </tr>
  <!--[endif]-->
 </tbody></table>
-For dataset downloads please check the **Quick Start**.
+
+For dataset downloads please check the __Quick Start__.
    
 ## Usage
   Ranger is a non-invasive optimiser. We have made a high level wrapper for PointNovo, so the usage is essentially the same as PointNovo, which eliminates the need for additional learning costs for the user. PointNovo's README could be found [here](https://github.com/shallFun4Learning/PGPointNovo/blob/main/README4PointNovo.md).
@@ -123,7 +124,7 @@ For dataset downloads please check the **Quick Start**.
   ~~~
   make build
   ~~~
-  And, download the datasets and files required for the knapsack algorithm. If it is not downloaded, the program will generate it automatically, but this will take some time. For reasons of copyright and fair comparison, we provide links to download the datasets in PointNovo's paper. The datasets covered in the paper and the knapsack files with different modifications can be found [here](https://www.zenodo.org/record/3998873). The test set for PGPointNovo's ablation experiments can be found [here](https://4wgz12-my.sharepoint.com/:f:/g/personal/admin_4wgz12_onmicrosoft_com/EkSVVDWO1t9PorW6Y1rqCi4BWXfDy61-cYVWA5Ey-LxPxA?e=r5wl2M).
+  And, download the datasets and files required for the knapsack algorithm. If it is not downloaded, the program will generate it automatically, but this will take some time. For reasons of copyright and fair comparison, we provide links to download the datasets in PointNovo's paper. The datasets covered in the paper and the knapsack files with different modifications can be found [here](https://www.zenodo.org/record/3998873). The test set for PGPointNovo's ablation experiments can be found [here](https://4wgz12-my.sharepoint.com/:f:/g/personal/admin_4wgz12_onmicrosoft_com/EkSVVDWO1t9PorW6Y1rqCi4Bpnn4D0GUbk-KlpSLCAuTOg?e=OU9kwK).
   To train model：
   ~~~
   make train
@@ -189,6 +190,9 @@ For dataset downloads please check the **Quick Start**.
    You should use *CUDA_VISIBLE_DEVICES* and *--nproc_per_node to correctly* specify which GPUs are required and the number of GPUs used.
    
    The *--master_port* can be omitted if only one parallelisation task is allowed. If multiple parallelisation tasks exist, different port numbers should be specified to avoid port conflicts.
+
+## Weights
+   The available weights file will be updated [here](https://4wgz12-my.sharepoint.com/:f:/g/personal/admin_4wgz12_onmicrosoft_com/EjEkBc3Mc51Bkam1oji6QDgBybJ8CeoN-Zqj6zw_bN1bmw?e=wcYxLt).
    
 ## LICENSE
 Please note that PointNovo is for non-commercial use only.
